@@ -35,3 +35,4 @@ mini-edr/
 ├── README.md
 ├── .gitignore
 └── venv/                       # Python virtual environment (NOT pushed to GitHub)
+'''
