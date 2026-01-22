@@ -17,22 +17,22 @@ The project also includes a **SOC-style web dashboard** to visualize security al
 
 Project Structure
 
-mini-edr/
-├── agent/
-│   ├── process_monitor.py      # Detects malicious process behavior
-│   ├── file_monitor.py         # Detects ransomware-style file activity
-│   ├── network_monitor.py      # Detects C2-like network beaconing
-│
-├── server/
-│   ├── detector.py             # Central detection & correlation engine
-│   ├── dashboard.py            # SOC-style Flask dashboard
-│
-├── monitored_dir/              # Directory used for ransomware testing
-├── logs/
-│   └── edr.log                 # Central JSON event log
-│
-├── start_edr.sh                # Service launcher script
-├── README.md
-├── .gitignore
-└── venv/                       # Python virtual environment (NOT pushed to GitHub)
+  mini-edr/
+  ├── agent/
+  │   ├── process_monitor.py      # Detects malicious process behavior
+  │   ├── file_monitor.py         # Detects ransomware-style file activity
+  │   ├── network_monitor.py      # Detects C2-like network beaconing
+  │
+  ├── server/
+  │   ├── detector.py             # Central detection & correlation engine
+  │   ├── dashboard.py            # SOC-style Flask dashboard
+  │
+  ├── monitored_dir/              # Directory used for ransomware testing
+  ├── logs/
+  │   └── edr.log                 # Central JSON event log
+  │
+  ├── start_edr.sh                # Service launcher script
+  ├── README.md
+  ├── .gitignore
+  └── venv/                       # Python virtual environment (NOT pushed to GitHub)
 '''
