@@ -78,6 +78,29 @@ pip install psutil watchdog flask requests
 ```
 
 ---
+📁 Important: Create monitored_dir (Required)
+
+Before starting the File Monitor, you must create the directory
+that will be monitored for ransomware-like activity.
+
+mkdir -p monitored_dir
+
+❓ Why is this required?
+
+The file monitoring engine uses Watchdog (inotify) to observe filesystem changes.
+
+If the target directory does not exist, the monitor will crash with FileNotFoundError.
+
+Creating monitored_dir ensures:
+
+Stable startup
+
+Correct ransomware detection
+
+No runtime errors
+
+This directory is intentionally kept separate so ransomware tests
+do not affect real system files.
 
 ## ▶️ How to Run (Step-by-Step)
 
