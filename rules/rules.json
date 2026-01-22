@@ -1,0 +1,10 @@
+{
+  "rapid_file_modification": {
+    "threshold": 5,
+    "time_window_seconds": 10,
+    "description": "Possible ransomware behavior"
+  },
+  "lolbin_download": {
+    "description": "Suspicious LOLBin based download execution"
+  }
+}
