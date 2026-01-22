@@ -1,4 +1,4 @@
-# 🛡️ Mini-EDR – Endpoint Detection & Response System
+ nb# 🛡️ Mini-EDR – Endpoint Detection & Response System
 
 Mini-EDR is a **behavior-based Endpoint Detection & Response (EDR)** system built using Python.  
 It monitors **process activity, file system behavior, and network traffic** to detect modern attack patterns in real time.
@@ -83,7 +83,6 @@ Before starting the **File Monitor**, you must create the directory
 that will be monitored for ransomware-like activity.
 
 ```bash
-````
 mkdir -p monitored_dir
 ````
 
