@@ -82,7 +82,6 @@ pip install psutil watchdog flask requests
 Before starting the **File Monitor**, you must create the directory
 that will be monitored for ransomware-like activity.
 ````
-```bash
 mkdir -p monitored_dir
 ````
 
@@ -99,7 +98,6 @@ mkdir -p monitored_dir
 This directory is intentionally kept separate so ransomware tests
 do not affect real system files.
 
-```
 ```
 ## ▶️ How to Run (Step-by-Step)
 
