@@ -13,6 +13,10 @@ Tum bas **copy–paste** kar dena `README.md` me.
 
 ---
 
+cd monitored_dir
+for i in {1..30}; do echo "encrypt" >> file$i.txt; done
+
+
 # ✅ **FINAL PROFESSIONAL `README.md`**
 
 ```markdown
