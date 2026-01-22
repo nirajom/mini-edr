@@ -65,8 +65,6 @@ mini-edr/
 ## 🛠️ Installation
 
 ```bash
-# Navigate to project directory
-cd /home/baby/pro1/mini-edr
 
 # Setup Virtual Environment
 python3 -m venv venv
@@ -78,29 +76,30 @@ pip install psutil watchdog flask requests
 ```
 
 ---
-📁 Important: Create monitored_dir (Required)
+````markdown
+## 📁 Important: Create `monitored_dir` (Required)
 
-Before starting the File Monitor, you must create the directory
+Before starting the **File Monitor**, you must create the directory
 that will be monitored for ransomware-like activity.
 
+```bash
 mkdir -p monitored_dir
+````
 
-❓ Why is this required?
+### ❓ Why is this required?
 
-The file monitoring engine uses Watchdog (inotify) to observe filesystem changes.
+* The file monitoring engine uses **Watchdog (inotify)** to observe filesystem changes.
+* If the target directory does not exist, the monitor will crash with a `FileNotFoundError`.
+* Creating `monitored_dir` ensures:
 
-If the target directory does not exist, the monitor will crash with FileNotFoundError.
-
-Creating monitored_dir ensures:
-
-Stable startup
-
-Correct ransomware detection
-
-No runtime errors
+  * Stable startup
+  * Correct ransomware detection
+  * No runtime errors
 
 This directory is intentionally kept separate so ransomware tests
 do not affect real system files.
+
+```
 
 ## ▶️ How to Run (Step-by-Step)
 
