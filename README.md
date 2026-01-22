@@ -100,7 +100,7 @@ This directory is intentionally kept separate so ransomware tests
 do not affect real system files.
 
 ```
-
+```
 ## ▶️ How to Run (Step-by-Step)
 
 Open separate terminal tabs for each component (ensure `venv` is active in each):
