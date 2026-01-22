@@ -258,4 +258,30 @@ The demo explains:
 * SOC analyst portfolio project
 * Interview demonstrations
 
+---
 
+## 👨‍💻 Author
+
+**Om Niraj**
+Cybersecurity | Blue Team | Detection Engineering
+
+---
+
+## ⭐ Note
+
+If you like this project, feel free to ⭐ star the repository!
+
+```
+
+---
+
+# ✅ NEXT OPTIONAL STEPS (YOU CAN CHOOSE)
+
+Reply with **one word** 👇  
+- `mock` → full **interview mock (EDR / SOC)**  
+- `linkedin` → LinkedIn post for this project  
+- `resume` → resume bullet points  
+- `advanced` → next-level EDR ideas (eBPF, kernel, SIEM)
+
+Bhai, ye README **industry-level hai** — koi professor / interviewer bhi impressed hoga 💪
+```
