@@ -185,7 +185,8 @@ bash -c "curl [http://example.com](http://example.com) | sh"
 ## 🎥 Demo Video (YouTube)
 
 📺 **Project Demo:**  
-👉 https://www.youtube.com/watch?v=YOUR_VIDEO_LINK_HERE
+👉 [https://www.youtube.com/watch?v=YOUR_VIDEO_LINK_HERE](https://youtu.be/aHNyyLgliHU)
+👉 https://youtu.be/KJQIYUIVBeg
 
 ### 📌 Demo Covers:
 - Overall system architecture
