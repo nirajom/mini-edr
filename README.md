@@ -81,9 +81,9 @@ pip install psutil watchdog flask requests
 
 Before starting the **File Monitor**, you must create the directory
 that will be monitored for ransomware-like activity.
-````
+```
 mkdir -p monitored_dir
-````
+```
 
 ### ❓ Why is this required?
 
