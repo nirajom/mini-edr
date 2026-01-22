@@ -1,13 +1,15 @@
-```markdown
 # 🛡️ Mini-EDR – Endpoint Detection & Response System
 
-Mini-EDR is a **behavior-based Endpoint Detection & Response (EDR)** system built using Python. It monitors **process activity, file system behavior, and network traffic** to detect modern attack patterns in real-time.
+Mini-EDR is a **behavior-based Endpoint Detection & Response (EDR)** system built using Python.  
+It monitors **process activity, file system behavior, and network traffic** to detect modern attack patterns in real time.
 
-- **Suspicious script execution** (e.g., pipe-to-shell)
-- **Ransomware-like behavior** (mass file modifications)
-- **Possible C2 (Command & Control)** network beaconing
+### 🔍 What it Detects
+- **Suspicious script execution** (e.g., pipe-to-shell attacks like `curl | sh`)
+- **Ransomware-like behavior** (mass file creation or modification)
+- **Possible C2 (Command & Control) activity** through repeated outbound network connections
 
-The project also includes a **SOC-style web dashboard** to visualize security alerts for incident response.
+The project also includes a **SOC-style web dashboard** that visualizes high-severity security alerts, helping analysts quickly identify and investigate incidents.
+
 
 ---
 
