@@ -1,4 +1,4 @@
- nb# 🛡️ Mini-EDR – Endpoint Detection & Response System
+# 🛡️ Mini-EDR – Endpoint Detection & Response System
 
 Mini-EDR is a **behavior-based Endpoint Detection & Response (EDR)** system built using Python.  
 It monitors **process activity, file system behavior, and network traffic** to detect modern attack patterns in real time.
